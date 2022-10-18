@@ -5,7 +5,7 @@
 .container{
     transition: 0.8s;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     animation: initHome 0.2s 0.3s both;
     z-index: 2;
@@ -13,9 +13,13 @@
     height: 100%;
     color: #EEEEEE;
     background-color: transparent;
-
     overflow-y: hidden;
     overflow-x: hidden;
+
+    .content{
+        width: 95vw;
+        height: 100%;
+    }
 }
 
 .day{
@@ -30,5 +34,15 @@
     }
     100%{
         background-color: #222222;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container{
+        .content{
+            width: 100%;
+            align-self: flex-end;
+            height: 90vh;
+        }
     }
 }

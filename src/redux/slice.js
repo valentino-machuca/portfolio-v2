@@ -5,6 +5,7 @@ const main = createSlice({
     initialState: {
         joined: false,
         night: true,
+        menu: false,
     },
     reducers: {
         setJoined(state){
@@ -18,6 +19,12 @@ const main = createSlice({
                 ...state,
                 night: !state.night,
             }
+        },
+        setMenu(state){
+            return {
+                ...state,
+                menu: !state.menu,
+            }
         }
     }
 })
@@ -25,6 +32,7 @@ const main = createSlice({
 export const {
     setJoined,
     setNight,
+    setMenu
 } = main.actions;
 
 export default main.reducer;

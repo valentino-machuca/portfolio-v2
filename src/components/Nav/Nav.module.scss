@@ -1,0 +1,297 @@
+.container{
+    transition: 1s;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000088;
+    backdrop-filter: blur(4px);
+    box-shadow: 12px 0px 15px -3px rgba(0,0,0,0.1);
+    transform: translate(-95vw, 0);
+
+    .icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        height: 100%;
+
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10%;
+            font-family: Poppins;
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90%;
+
+            a, .contact{
+                transition: 0.3s;
+                margin-top: 10%;
+                margin-bottom: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+
+                img{
+                    width: 70%;
+                    height: 70%;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    transition: 0.3s;
+                    scale: 1.01;
+                    background-color: white;
+
+                    img{
+                        scale: 1.03;
+                        filter: invert(1);
+                    }
+                }
+            }
+
+            .contactOpen{
+                transition: 0.3s;
+                margin-top: 10%;
+                margin-bottom: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                color: #222222;
+                background-color: rgba(255, 255, 255, 0.75);
+
+                img{
+                    width: 70%;
+                    height: 70%;
+                    filter: invert(1);
+                }
+
+                &:hover{
+                    transition: 0.5s;
+                    scale: 1.02;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .formulario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 95vw;
+        height: 100%;
+    }
+}
+
+.open{
+    transition: 1s;
+    transform: translate(0, 0);
+}
+
+.day{
+    background-color: #8aacb375;
+    backdrop-filter: blur(4px);
+    box-shadow: 12px 0px 15px -3px rgba(0,0,0,0.1);
+
+    .icons{
+        h2{
+            color: #222222;
+        }
+
+        .contacts{
+            a, .contact{
+                transition: 0.3s;
+
+                img{
+                    filter: invert(1) drop-shadow(1px 1px 3px rgba(34, 34, 34, 0.237));
+                }
+
+                &:hover{
+                    transition: 0.3s;
+                    background-color: #222222;
+
+                    img{
+                        scale: 1.03;
+                        filter: invert(0);
+                    }
+                }
+            }
+
+            .contactOpen{
+                background-color: #222222be;
+                color: white;
+
+                img{
+                    filter: invert(0);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        transform: translate(-93vw, 0);
+
+        .icons{
+            width: 7vw;
+        }
+    }
+
+    .open{
+        transition: 1s;
+        transform: translate(0, 0);
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .container{
+        transform: translate(-91vw, 0);
+
+        .icons{
+            width: 9vw;
+        }
+    }
+
+    .open{
+        transition: 1s;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        transform: translate(-89vw, 0);
+
+        .icons{
+            width: 11vw;
+        }
+    }
+
+    .open{
+        transition: 1s;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container{
+        align-self: start;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        transform: translate(0, -90vh);
+        box-shadow: 0px 12px 15px -3px rgba(0,0,0,0.1);
+
+        .icons{
+            width: 100%;
+            height: 10%;
+            flex-direction: row;
+
+            h2{
+                width: 15%;
+                height: 100%;
+            }
+
+            .contacts{
+                justify-content: flex-end;
+                flex-direction: row;
+                width: 85%;
+                height: 100%;
+                margin-right: 20px;
+
+                a, .contact{
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 5px;
+                }
+
+                .contactOpen{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .formulario{
+            width: 100%;
+        }
+    }
+
+    .open{
+        transition: 1s;
+        transform: translate(0, 0);
+    }
+}
+
+
+@media (hover: none) {
+    .container{
+        .icons{
+            .contacts{
+                a, .contact{
+                    &:hover{
+                        cursor: pointer;
+                        transition: 0.3s;
+                        scale: 1.01;
+                        background-color: transparent;
+
+                        img{
+                            scale: 1.03;
+                            filter: invert(0);
+                        }
+                    }
+                }
+
+                .contactOpen{
+                    &:hover{
+                        transition: 0.5s;
+                        scale: 1.02;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .day{
+        .icons{
+            .contacts{
+                a, .contact{
+                    &:hover{
+                        transition: 0.3s;
+                        background-color: transparent;
+                        img{
+                            scale: 1.03;
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

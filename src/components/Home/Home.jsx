@@ -6,10 +6,8 @@ import s from './Home.module.scss';
 import { AnimatePresence } from 'framer-motion';
 // import Presentation from '../Presentation/Presentation';
 // import Techs from '../Techs/Techs';
-import Card from '../Card/Card';
-
-//redux
-import { setNight } from '../../redux/slice';
+// import Card from '../Card/Card';
+import Nav from '../Nav/Nav';
 
 const Home = () => {
     const joined = useSelector(state => state.joined);
@@ -17,13 +15,15 @@ const Home = () => {
     const dispatch = useDispatch();
 
   return (
-    <div className={joined ? `${s.container} ${night ? '' : s.day }` : s.noDisplay}  onClick={() => dispatch(setNight())}>
+    <div className={joined ? `${s.container} ${night ? '' : s.day }` : s.noDisplay} >
         <AnimatePresence>
           {
             joined &&
-            // <Techs/>
-            // <Presentation/>
-            <Card />
+            <>
+            <Nav />
+            <div className={s.content}>
+            </div>
+            </>
           }
         </AnimatePresence>
     </div>
