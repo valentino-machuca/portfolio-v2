@@ -14,9 +14,10 @@
         align-items: center;
         position: absolute;
         z-index: 0;
-        width: 120px;
-        height: 50px;
+        width: 450px;
+        height: 80px;
         border-radius: 5px;
+        color: #EEEEEE;
         background-color: #222222;
         animation: entrance_ball 0.5s both;
 
@@ -33,13 +34,10 @@
 
         &:hover{
             cursor: pointer;
+            scale: 1.01;
             transition: 0.3s;
-            background-color: #EEEEEE;
-            box-shadow: 0px 3px 15px -3px rgba(0,0,0,0.6);
+            background-color: #333333;
 
-            .greetings{
-                color: #222222;
-            }
         }
 
     }
@@ -48,11 +46,11 @@
         transition: 0.3s;
         position: absolute;
         z-index: 0;
-        width: 120px;
-        height: 50px;
+        width: 450px;
+        height: 80px;
         border-radius: 5px;
         background-color: #222222;
-        animation: explode 2s both;
+        animation: explode 0.5s both;
 
         .greetings{
             display: none;
@@ -84,14 +82,23 @@
 
 @keyframes explode {
     10%{
-        top: 47.5%;
-        width: 100px;
-        height: 40px;
+        top: 47%;
+        width: 450px;
+        height: 80px;
     }
-    50%{
+    100%{
         top: 0;
         width: 100%;
         height: 100%;
         border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container{
+        .ball{
+            width: 300px;
+            height: 70px;
+        }
     }
 }

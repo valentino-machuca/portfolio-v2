@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95vw;
+    height: auto;
+
+    .tech{
+        width: 130px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            transition: 0.3s;
+            margin-top: 10px;
+            opacity: 0;
+            color: #EEEEEE;
+        }
+
+        img{
+            margin-inline: 20px;
+            width: 60px;
+        }
+
+        &:hover{
+            p{
+                transition: 0.3s;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//light mode
+
+.day{
+    .tech{
+        img{
+            filter: drop-shadow(5px 5px 3px rgba(34, 34, 34, 0.437));
+        }
+
+        p{
+            font-weight: 500;
+            color: #222222;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .container{
+        .tech{
+            p{
+                opacity: 1;
+            }
+        }
+    }
+
+    .day{
+        .tech{
+            p{
+                opacity: 1;
+            }
+        }
+    }
+
+}
