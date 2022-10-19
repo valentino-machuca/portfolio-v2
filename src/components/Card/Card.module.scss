@@ -1,6 +1,7 @@
 .redirect{
     margin-top: 50px;
     margin-bottom: 20px;
+    margin-right: 20px;
     width: 600px;
     min-height: 600px;
     text-decoration: none;
@@ -124,8 +125,8 @@
 
 @media screen and (max-width: 1200px) {
     .redirect{
-        width: 550px;
-        height: 550px;
+        width: 500px;
+        min-height: 500px;
 
         .container{
             .card{
