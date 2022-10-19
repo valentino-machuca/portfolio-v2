@@ -47,7 +47,7 @@ const Form = () => {
   return (
     <div className={`${s.container} ${night ? '' : s.day}`}>
         <ToastContainer
-            position="bottom-center"
+            position="bottom-left"
             autoClose={5000}
             hideProgressBar={false}
             newestOnTop={false}
@@ -56,7 +56,7 @@ const Form = () => {
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            style={{width: 400, height: 120, fontSize: 16}}
+            style={{width: 300, height: 80, fontSize: 12}}
         />
 
         <form className={s.form} onSubmit={handleSubmit}>

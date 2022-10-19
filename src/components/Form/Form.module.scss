@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 45%;
     height: 90%;
     border-radius: 10px;
     background-color: rgba(46, 46, 46, 0.941);
@@ -18,7 +18,7 @@
         height: 90%;
 
         h4{
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 200;
         }
 
@@ -43,7 +43,7 @@
                     height: 80%;
                     font-weight: 300;
                     font-family: Poppins;
-                    font-size: 18px;
+                    font-size: 16px;
                     border-radius: 5px;
                     border: 0;
                     color: #EEEEEE;
@@ -106,7 +106,7 @@
                     max-height: 90%;
                     font-weight: 300;
                     font-family: Poppins;
-                    font-size: 18px;
+                    font-size: 16px;
                     border-radius: 5px;
                     border: 0;
                     color: #EEEEEE;
@@ -147,11 +147,12 @@
                 color: #EEEEEE;
                 background-color: #232323;
                 font-family: Poppins;
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 100;
                 box-shadow: rgba(0, 0, 0, 0.298) 0px 2px 10px;
+                border-radius: 5px;
                 border: 0;
-                width: 60%;
+                width: 50%;
                 height: 90%;
 
                 &:hover{
@@ -167,8 +168,8 @@
     }
 }
 
-.night{
-    background-color: #d0bfa6;
+.day{
+    background-color: #8aacb3;
 
     .form{
 
@@ -221,6 +222,20 @@
 }
 
 
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        width: 80%;
+    }
+}
+
+
+
 @media screen and (max-width: 550px) {
     .container{
         width: 95%;
@@ -248,6 +263,7 @@
 
             .sendbutton{
                 .btn{
+                    width: 90%;
                     font-size: 18px;
                 }
             }

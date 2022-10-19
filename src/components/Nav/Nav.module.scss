@@ -12,6 +12,8 @@
     box-shadow: 12px 0px 15px -3px rgba(0,0,0,0.1);
     transform: translate(-95vw, 0);
 
+    overflow: hidden;
+
     .icons{
         display: flex;
         flex-direction: column;
