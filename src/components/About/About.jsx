@@ -23,7 +23,7 @@ const About = () => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1, delay: 1.5}}
-        >Soy desarrollador Full Stack orientado a Front End y ocasionalmente diseño. Me gusta crear lindos, solidos y escalables productos frontend que tengan una gran experiencia de usuario.</motion.p>
+        >Soy desarrollador Full Stack orientado a Front End y ocasionalmente diseño. Me gusta crear agradables, solidos y escalables productos frontend que cuenten con una gran experiencia de usuario.</motion.p>
     </div>
   )
 }

@@ -4,24 +4,8 @@ import s from './Card.module.scss';
 
 import {motion} from 'framer-motion';
 
-
-//test
-import jobhub from '../Resources/jobhub/jobhub.png'
-import jobhub2 from '../Resources/jobhub/jobhub2.png'
-import jobhub3 from '../Resources/jobhub/jobhub3.png'
-import jobhub4 from '../Resources/jobhub/jobhub4.png'
-
-const Card = () => {
+const Card = ({data}) => {
     const night = useSelector(state => state.night);
-    let data = {
-        name: 'JobHub',
-        description: 'JobHub es un proyecto full stack grupal que nació con el objetivo de conectar personas con profesionales que ofrezcan sus servicios. Con este proyecto logré reforzar mis habilidades blandas como el trabajo en equipo y la metodología SCRUM. En este proyecto cumplí el rol de Front End Developer.',
-        img1: jobhub,
-        img2: jobhub2,
-        img3: jobhub3,
-        img4: jobhub4,
-        link: 'https://jobhub.vercel.app/',
-      }
 
   return (
     <a className={s.redirect} href={data.link} target='_blank' rel="noreferrer">

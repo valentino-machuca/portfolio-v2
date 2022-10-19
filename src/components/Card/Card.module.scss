@@ -1,6 +1,8 @@
 .redirect{
+    margin-top: 50px;
+    margin-bottom: 20px;
     width: 600px;
-    height: 600px;
+    min-height: 600px;
     text-decoration: none;
     display: flex;
     justify-content: flex-start;
@@ -120,10 +122,29 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .redirect{
+        width: 550px;
+        height: 550px;
+
+        .container{
+            .card{
+                p{
+                    font-size: 14px;
+                }
+                h4{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: 650px) {
     .redirect{
-        width: 350px;
-        height: 350px;
+        width: 450px;
+        min-height: 450px;
 
         .container{
             .card{
@@ -137,3 +158,18 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .redirect{
+        width: 400px;
+        min-height: 400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .redirect{
+        width: 330px;
+        min-height: 330px;
+    }
+}
+
