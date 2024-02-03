@@ -32,7 +32,7 @@ import jobhub4 from '../Resources/jobhub/jobhub4.png';
 
 let borealData = {
   name: 'Boreal Technologies',
-  description: 'Desde noviembre de 2023, trabajo como desarrollador web en una consultora IT, participando activamente en diversos proyectos como desarrollador full stack. Esta experiencia ha fortalecido mis conocimientos en entornos de trabajo real, permitiéndome enfrentar desafíos técnicos y colaborar eficazmente en equipos multidisciplinarios.',
+  description: 'Desde noviembre de 2022, trabajo como desarrollador web en una consultora IT, participando activamente en diversos proyectos como desarrollador full stack. Esta experiencia ha fortalecido mis conocimientos en entornos de trabajo real, permitiéndome enfrentar desafíos técnicos y colaborar eficazmente en equipos multidisciplinarios.',
   img1: boreal,
   img2: boreal2,
   img3: boreal3,
