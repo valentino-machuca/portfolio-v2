@@ -44,14 +44,14 @@ const Nav = () => {
                     animate={{opacity:1, y:0}}
                     transition={{duration: 0.3, delay: 2.5}}
                 ><img src={linkedin} alt="linkedin"/></motion.a>
-
+{/* 
                 <motion.a
                     initial={{opacity: 0, y:-100}}
                     animate={{opacity:1, y:0}}
                     transition={{duration: 0.3, delay: 2.7}}
                     href={download}
                     download={true}
-                ><img src={cv} alt="cv"/></motion.a>
+                ><img src={cv} alt="cv"/></motion.a> */}
 
                 <motion.div
                     initial={{opacity: 0, y:-100}}

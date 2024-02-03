@@ -4,15 +4,60 @@ import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 
 //tecnologías
-import express from './assets/express.png';
-import framer from './assets/framer.png';
 import javascript from './assets/javascript.png';
-import node from './assets/node.png';
-import postgres from './assets/postgres.png';
+import typescript from './assets/typescript.png';
 import react from './assets/react.png';
 import redux from './assets/redux.png';
 import sass from './assets/sass.png';
-import sequelize from './assets/sequelize.png';
+import framer from './assets/framer.png';
+import postgres from './assets/postgres.png';
+import java from './assets/java.png';
+import angular from './assets/angular.png';
+import material from './assets/material.png';
+
+const techItems = [
+    {
+        label: 'JavaScript',
+        image: javascript,
+    },
+    {
+        label: 'TypeScript',
+        image: typescript,
+    },
+    {
+        label: 'React',
+        image: react,
+    },
+    {
+        label: 'Redux',
+        image: redux,
+    },
+    {
+        label: 'Sass',
+        image: sass,
+    },
+    {
+        label: 'Material UI',
+        image: material,
+    },
+    {
+        label: 'Framer Motion',
+        image: framer,
+    },
+    {
+        label: 'Angular',
+        image: angular
+    },
+    {
+        label: 'Java',
+        image: java
+    },
+    {
+        label: 'PostgresSQL',
+        image: postgres,
+    }
+
+]
 
 const Techs = () => {
     const night = useSelector(state => state.night);
@@ -30,50 +75,14 @@ const Techs = () => {
         whileInView={{opacity:1}}
         viewport={{ once: true, amount: 0.8 }}
     >
-        <motion.div className={s.tech} variants={item} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: .5}} >
-            <img src={javascript} alt="js" />
-            <p>JavaScript</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="inverth" animate="invertv" transition={{ duration: 0.5, delay: .7}} >
-            <img src={react} alt="react" />
-            <p>React</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: .9}} >
-            <img src={redux} alt="redux" />
-            <p>Redux</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="inverth" animate="invertv" transition={{ duration: 0.5, delay: 1.1}} >
-            <img src={sass} alt="sass" />
-            <p>Sass</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 1.3}} >
-            <img src={framer} alt="framer" />
-            <p>Framer Motion</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="inverth" animate="invertv" transition={{ duration: 0.5, delay: 1.5}} >
-            <img src={node} alt="node" />
-            <p>Node.js</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 1.7}} >
-            <img src={express} alt="express" />
-            <p>Express</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="inverth" animate="invertv" transition={{ duration: 0.5, delay: 1.9}} >
-            <img src={sequelize} alt="sequelize" />
-            <p>Sequelize</p>
-        </motion.div>
-
-        <motion.div className={s.tech} variants={item} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: 2.1}} >
-            <img src={postgres} alt="postgres" />
-            <p>PostgreSQL</p>
-        </motion.div>
+        {
+            techItems.map((tech, index) => (
+                <motion.div className={s.tech} variants={item} initial="hidden" animate="visible" transition={{ duration: 0.5, delay: .5 + (index/10)}} >
+                    <img src={tech.image} alt="js" />
+                    <p>{tech.label}</p>
+                </motion.div>
+                ))
+            }
 
     </motion.div>
   )

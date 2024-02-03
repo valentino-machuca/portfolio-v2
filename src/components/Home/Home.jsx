@@ -10,20 +10,35 @@ import Nav from '../Nav/Nav';
 import About from '../About/About';
 
 //data
-import hangloose from '../Resources/hangloose/hangloose.png'
-import hangloose2 from '../Resources/hangloose/hangloose2.png'
-import hangloose3 from '../Resources/hangloose/hangloose3.png'
-import hangloose4 from '../Resources/hangloose/hangloose4.png'
+import boreal from '../Resources/boreal/boreal.webp';
+import boreal2 from '../Resources/boreal/boreal2.jpg';
+import boreal3 from '../Resources/boreal/boreal3.jpg';
+import boreal4 from '../Resources/boreal/boreal4.jpg';
 
-import weather from '../Resources/weather/weather.png'
-import weather2 from '../Resources/weather/weather2.png'
-import weather3 from '../Resources/weather/weather3.png'
-import weather4 from '../Resources/weather/weather4.png'
+import hangloose from '../Resources/hangloose/hangloose.png';
+import hangloose2 from '../Resources/hangloose/hangloose2.png';
+import hangloose3 from '../Resources/hangloose/hangloose3.png';
+import hangloose4 from '../Resources/hangloose/hangloose4.png';
 
-import jobhub from '../Resources/jobhub/jobhub.png'
-import jobhub2 from '../Resources/jobhub/jobhub2.png'
-import jobhub3 from '../Resources/jobhub/jobhub3.png'
-import jobhub4 from '../Resources/jobhub/jobhub4.png'
+import weather from '../Resources/weather/weather.png';
+import weather2 from '../Resources/weather/weather2.png';
+import weather3 from '../Resources/weather/weather3.png';
+import weather4 from '../Resources/weather/weather4.png';
+
+import jobhub from '../Resources/jobhub/jobhub.png';
+import jobhub2 from '../Resources/jobhub/jobhub2.png';
+import jobhub3 from '../Resources/jobhub/jobhub3.png';
+import jobhub4 from '../Resources/jobhub/jobhub4.png';
+
+let borealData = {
+  name: 'Boreal Technologies',
+  description: 'Desde noviembre de 2023, trabajo como desarrollador web en una consultora IT, participando activamente en diversos proyectos como desarrollador full stack. Esta experiencia ha fortalecido mis conocimientos en entornos de trabajo real, permitiéndome enfrentar desafíos técnicos y colaborar eficazmente en equipos multidisciplinarios.',
+  img1: boreal,
+  img2: boreal2,
+  img3: boreal3,
+  img4: boreal4,
+  link: 'https://it.borealtech.com/',
+}
 
 let hanglooseData = {
   name: 'Hangloose',
@@ -72,6 +87,7 @@ const Home = () => {
                     <Techs />
                 </div>
                 <div className={s.cards}>
+                  <Card data={borealData}/>
                   <Card data={jobhubData}/>
                   <Card data={hanglooseData}/>
                   <Card data={weatherData}/>
